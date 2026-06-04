@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Data
 @NoArgsConstructor
-@Table(name = "animals")
+@Table(name = "animal")
 
 public class Animal {
 

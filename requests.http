@@ -1,0 +1,125 @@
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "email": "admin@puravidasanctuary.com",
+  "password": "1234"
+}
+
+###
+//------------------------------POST------------------------------
+###
+
+POST http://localhost:8080/animals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+  "name": "Margarita",
+  "species": "Vaca Frisona",
+  "healthStatus": "HEALTHY",
+  "medicalHistory": "Rescatada de industria lechera. Totalmente recuperada.",
+  "rescueDate": "2026-01-15"
+}
+
+###
+
+POST http://localhost:8080/animals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+  "name": "Babe",
+  "species": "Cerdo Vietnamita",
+  "healthStatus": "IN_TREATMENT",
+  "medicalHistory": "Problemas de sobrepeso y articulaciones, en dieta estricta.",
+  "rescueDate": "2026-05-20"
+}
+
+###
+
+POST http://localhost:8080/animals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+  "name": "Copito",
+  "species": "Cabra Enana",
+  "healthStatus": "HEALTHY",
+  "medicalHistory": "Llegó muy asustada, pero físicamente sana.",
+  "rescueDate": "2026-06-01"
+}
+
+###
+
+POST http://localhost:8080/animals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+  "name": "Pumba",
+  "species": "Jabalí",
+  "healthStatus": "SICK",
+  "medicalHistory": "Atropello leve. Herida en la pata trasera derecha.",
+  "rescueDate": "2026-06-03"
+}
+
+###
+
+POST http://localhost:8080/animals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+  "name": "Turuleca",
+  "species": "Gallina",
+  "healthStatus": "HEALTHY",
+  "medicalHistory": "Desplume severo por estrés, ya le están creciendo las plumas.",
+  "rescueDate": "2026-04-10"
+}
+
+###
+
+POST http://localhost:8080/animals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+"name": "Crazy",
+"species": "Cabra",
+"healthStatus": "SICK",
+"medicalHistory": "Tiene la pata delantera derecha parcialmente rota.",
+"rescueDate": "2026-03-09"
+}
+
+###
+//------------------------------GET------------------------------
+###
+
+GET http://localhost:8080/animals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+
+###
+//------------------------------PUT------------------------------
+###
+
+PUT http://localhost:8080/animals/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+    "healthStatus": "HEALTHY",
+    "id": 10,
+    "medicalHistory": "Desplume severo por estrés, ya le están creciendo las plumas.",
+    "name": "Turuleca",
+    "rescueDate": "2026-04-10",
+    "species": "Gallina",
+    "tasks": []
+  }
+###
+//------------------------------DELETE------------------------------
+###
+
+DELETE http://localhost:8080/animals/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+

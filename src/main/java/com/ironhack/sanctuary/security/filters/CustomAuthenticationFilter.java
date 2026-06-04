@@ -70,7 +70,7 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
 //3. Fabricar el token JWT.
         String access_token = JWT.create()
                 .withSubject(user.getUsername())//Username = email
-                .withExpiresAt(new Date(System.currentTimeMillis() + 10 * 60 * 1000)) //Caducidad 10min.
+                .withExpiresAt(new Date(System.currentTimeMillis() + 14L * 24 * 60 * 60 * 1000)) //Caducidad 18Junio'26.
                 .withIssuer(request.getRequestURL().toString())
                 .withClaim("roles", user.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList()))
                 .sign(algorithm);

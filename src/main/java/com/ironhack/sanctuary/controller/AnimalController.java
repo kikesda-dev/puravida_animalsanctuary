@@ -25,6 +25,12 @@ public class AnimalController {
         return animalService.getAnimalById(id);
     }
 
+    @PutMapping
+    @ResponseStatus(HttpStatus.OK)
+    public Animal updateAnimal(@PathVariable Long id, @RequestBody Animal animal) {
+        return animalService.updateAnimal(id, animal);
+    }
+
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Animal createAnimal(@RequestBody Animal animal) {
@@ -36,4 +42,5 @@ public class AnimalController {
     public void deleteAnimal(@PathVariable Long id) {
         animalService.deleteAnimal(id);
     }
+
 }

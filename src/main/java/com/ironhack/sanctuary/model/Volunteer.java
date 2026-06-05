@@ -12,6 +12,6 @@ public class Volunteer extends User {
 
     private String availability;
     private String skills;
-    private String needsSupervision;
+    private boolean needsSupervision;
 
 }

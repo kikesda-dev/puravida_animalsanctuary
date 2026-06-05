@@ -1,5 +1,6 @@
 package com.ironhack.sanctuary.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ironhack.sanctuary.enums.TaskStatus;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -28,9 +29,11 @@ public class Task {
 
     @ManyToOne
     @JoinColumn(name = "animal_id")
+    @JsonIgnore
     private Animal animal;
 
     @ManyToOne
     @JoinColumn(name = "volunteer_id")
+    @JsonIgnore
     private Volunteer volunteer;
 }

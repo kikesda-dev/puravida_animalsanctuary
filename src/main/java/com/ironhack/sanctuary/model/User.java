@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
+
 @Entity
 @Table(name = "users")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -21,4 +23,6 @@ public abstract  class User {
     private String email;
 
     private String password;
+
+    private LocalDate joinDate;
 }

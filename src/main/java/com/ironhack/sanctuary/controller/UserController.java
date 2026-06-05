@@ -1,6 +1,8 @@
 package com.ironhack.sanctuary.controller;
 
+import com.ironhack.sanctuary.model.Coordinator;
 import com.ironhack.sanctuary.model.User;
+import com.ironhack.sanctuary.model.Volunteer;
 import com.ironhack.sanctuary.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -23,6 +25,18 @@ public class UserController {
     @GetMapping("/{id}")
     public User getUserById(@PathVariable Long id) {
         return userService.getUserById(id);
+    }
+
+    @PostMapping("/volunteer")
+    @ResponseStatus(HttpStatus.CREATED)
+    public User createVolunteer(@RequestBody Volunteer volunteer) {
+        return userService.saveUser(volunteer);
+    }
+
+    @PostMapping("/coordinator")
+    @ResponseStatus(HttpStatus.CREATED)
+    public User createCoordinator(@RequestBody Coordinator coordinator) {
+        return userService.saveUser(coordinator);
     }
 
     @DeleteMapping("/{id}")

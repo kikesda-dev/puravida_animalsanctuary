@@ -21,6 +21,7 @@ public class Donation {
     private Double amount;
     private String message;
     private LocalDate donationDate;
+    private boolean isAnonymous;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

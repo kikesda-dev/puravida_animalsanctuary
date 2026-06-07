@@ -1,0 +1,52 @@
+###
+//------------------------------POST------------------------------
+###
+
+### CASO 1: Donante NO registrado que deja su nombre (Ej: Alguien entra en la web y dona)
+POST http://localhost:8080/donations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+  "amount": 50.00,
+  "message": "Vi a la vaca Margarita en Instagram, ¡es preciosa!",
+  "donationDate": "2026-06-07",
+  "isAnonymous": false,
+  "donorName": "María López"
+}
+
+###
+
+### CASO 2: Donante NO registrado totalmente anónimo (Ni usuario, ni nombre)
+POST http://localhost:8080/donations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+  "amount": 200.00,
+  "message": "Para que compréis más forraje este invierno.",
+  "donationDate": "2026-06-07",
+  "isAnonymous": true
+}
+
+###
+
+### CASO 3: Donante REGISTRADO (Un voluntario, por ejemplo el ID 1, que dona desde su panel)
+POST http://localhost:8080/donations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Content-Type: application/json
+
+{
+  "amount": 25.00,
+  "message": "Mi pequeña aportación mensual como voluntario.",
+  "donationDate": "2026-06-07",
+  "isAnonymous": false,
+  "user": { "id": 1 }
+}
+
+###
+//------------------------------GET------------------------------
+###
+
+GET http://localhost:8080/donations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM

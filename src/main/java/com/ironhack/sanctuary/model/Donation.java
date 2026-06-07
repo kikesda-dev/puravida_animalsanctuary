@@ -18,10 +18,12 @@ public class Donation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    
     private Double amount;
     private String message;
     private LocalDate donationDate;
     private boolean isAnonymous;
+    private String donorName;
 
     @ManyToOne
     @JoinColumn(name = "user_id")

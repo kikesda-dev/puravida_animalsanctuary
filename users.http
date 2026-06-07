@@ -1,0 +1,167 @@
+
+POST http://localhost:8080/api/login
+Content-Type: application/json
+
+{
+  "email": "admin@puravidasanctuary.com",
+  "password": "1234"
+}
+
+###
+//------------------------------POST------------------------------
+###
+
+### Voluntario 1
+POST http://localhost:8080/users/volunteer
+Content-Type: application/json
+
+{
+  "name": "Carlos Mendoza",
+  "email": "carlos.mendoza@santuario.com",
+  "password": "voluntario123",
+  "joinDate": "2026-01-10",
+  "availability": "Mañanas de Lunes a Viernes",
+  "skills": "Medicación de aves y manejo de cachorros",
+  "needsSupervision": false
+}
+
+###
+
+### Voluntario 2
+POST http://localhost:8080/users/volunteer
+Content-Type: application/json
+
+{
+  "name": "Elena Ribera",
+  "email": "elena.ribera@santuario.com",
+  "password": "voluntario456",
+  "joinDate": "2026-03-22",
+  "availability": "Fines de semana completos",
+  "skills": "Construcción, limpieza de establos y transporte",
+  "needsSupervision": true
+}
+
+###
+
+### Voluntario 3
+POST http://localhost:8080/users/volunteer
+Content-Type: application/json
+
+{
+  "name": "Miguel Ángel Torres",
+  "email": "miguel.torres@santuario.com",
+  "password": "passmiguel1",
+  "joinDate": "2026-02-15",
+  "availability": "Tardes de Martes y Jueves",
+  "skills": "Mantenimiento eléctrico y fontanería",
+  "needsSupervision": false
+}
+
+###
+
+### Voluntario 4
+POST http://localhost:8080/users/volunteer
+Content-Type: application/json
+
+{
+  "name": "Sofía Castro",
+  "email": "sofia.castro@santuario.com",
+  "password": "sofiapassword",
+  "joinDate": "2026-04-05",
+  "availability": "Lunes por la mañana",
+  "skills": "Redes sociales, fotografía y peluquería animal",
+  "needsSupervision": false
+}
+
+###
+
+### Voluntario 5
+POST http://localhost:8080/users/volunteer
+Content-Type: application/json
+
+{
+  "name": "Javier Ortiz",
+  "email": "javier.ortiz@santuario.com",
+  "password": "javierpassword",
+  "joinDate": "2026-05-12",
+  "availability": "Fines de semana",
+  "skills": "Conducción de camiones y remiz",
+  "needsSupervision": true
+}
+
+###
+
+### Voluntario 6
+POST http://localhost:8080/users/volunteer
+Content-Type: application/json
+
+{
+  "name": "Lucía Fernández",
+  "email": "lucia.fer@santuario.com",
+  "password": "luciapass123",
+  "joinDate": "2026-01-20",
+  "availability": "Mañanas de Miércoles",
+  "skills": "Preparación de dietas específicas y pesaje",
+  "needsSupervision": false
+}
+
+###
+
+### Voluntario 7
+POST http://localhost:8080/users/volunteer
+Content-Type: application/json
+
+{
+  "name": "Diego Silva",
+  "email": "diego.silva@santuario.com",
+  "password": "diegopassword",
+  "joinDate": "2026-05-19",
+  "availability": "Tardes completas",
+  "skills": "Limpieza profunda y desinfección médica",
+  "needsSupervision": true
+}
+
+###
+
+### Voluntario 8
+POST http://localhost:8080/users/volunteer
+Content-Type: application/json
+
+{
+  "name": "Marta Jiménez",
+  "email": "marta.jimenez@santuario.com",
+  "password": "martapassword",
+  "joinDate": "2026-02-28",
+  "availability": "Viernes todo el día",
+  "skills": "Asistencia en curas veterinarias complejas",
+  "needsSupervision": false
+}
+
+###
+
+### Coordinador Principal (Yo/Admin)
+POST http://localhost:8080/users/coordinator
+Content-Type: application/json
+
+{
+  "name": "Administrador Pura Vida",
+  "email": "admin@puravidasanctuary.com",
+  "password": "1234",
+  "joinDate": "2026-01-01",
+  "managementArea": "Dirección General y Sistema Web",
+  "emergencyPhone": "+34 600 123 456"
+}
+
+###
+//------------------------------GET------------------------------
+###
+
+GET http://localhost:8080/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
+
+###
+//------------------------------DELETE------------------------------
+###
+
+DELETE http://localhost:8080/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k

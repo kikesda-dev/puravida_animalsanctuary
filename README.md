@@ -130,7 +130,7 @@ curl http://localhost:8080/animals \
 
 | Recurso          | Enlace                                          |
 |------------------|-------------------------------------------------|
-| Trello           | *Pendiente*                                     |
+| Trello           | [https://trello.com/invite/b/6a26ef2a669a12783a7dee00/ATTIaceeb7dc8ba850a2ae19ba7fb0b8a6a74AAA2F8C/proyecto-final-sanctuary](https://trello.com/invite/b/6a26ef2a669a12783a7dee00/ATTIaceeb7dc8ba850a2ae19ba7fb0b8a6a74AAA2F8C/proyecto-final-sanctuary) |
 | Presentación     | *Pendiente*                                     |
 | Repositorio GitHub | [https://github.com/kikesda-dev/puravida_animalsanctuary](https://github.com/kikesda-dev/puravida_animalsanctuary) |
 

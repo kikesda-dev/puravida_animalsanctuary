@@ -1,5 +1,6 @@
 package com.ironhack.sanctuary.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,5 +31,5 @@ public class Task {
     @ManyToOne
     @JoinColumn(name = "volunteer_id")
     @ToString.Exclude
-    private User volunteer;
+    private Volunteer volunteer;
 }

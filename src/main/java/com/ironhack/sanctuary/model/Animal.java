@@ -1,5 +1,6 @@
 package com.ironhack.sanctuary.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.ironhack.sanctuary.enums.HealthStatus;
 import jakarta.persistence.*;
 import lombok.Data;
@@ -27,5 +28,6 @@ public class Animal {
     private HealthStatus healthStatus;
 
     @OneToMany(mappedBy = "animal", fetch = FetchType.EAGER)
+    @JsonIgnore
     private List<Task> tasks = new ArrayList<>();
 }

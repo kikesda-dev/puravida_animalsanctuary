@@ -46,6 +46,7 @@ public class SecurityConfig {
         //Reglas de acceso a las rutas
         http.authorizeHttpRequests((requests) -> requests
                 .requestMatchers("/api/login/**").permitAll() //Puerta pública
+                .requestMatchers(org.springframework.http.HttpMethod.POST, "/users/volunteer").permitAll()
 
         //AQUÍ SE AÑADIRÁN LAS REGLAS DE ANIMALES Y DONACIONES
 

@@ -2,7 +2,7 @@
 //------------------------------POST------------------------------
 ###
 
-### Tarea 1: Curas de la pata de Crazy (Animal ID 6) - Asignada a Carlos (User ID 1)
+### Tarea 1: Curas de la pata de Crazy (Animal ID 12) - Asignada a Carlos (User ID 2)
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -12,13 +12,13 @@ Content-Type: application/json
   "description": "Limpiar la herida de la pata delantera derecha y cambiar el vendaje.",
   "status": "IN_PROGRESS",
   "dueDate": "2026-06-10",
-  "animal": { "id": 6 },
-  "volunteer": { "id": 1 }
+  "animal": { "id": 12 },
+  "volunteer": { "id": 2 }
 }
 
 ###
 
-### Tarea 2: Limpieza de Copito (Animal ID 3) - Asignada a Elena (User ID 2)
+### Tarea 2: Limpieza de Copito (Animal ID 8) - Asignada a Elena (User ID 3)
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -28,13 +28,13 @@ Content-Type: application/json
   "description": "Retirar paja sucia del suelo, desinfectar la zona y poner suelo nuevo seco.",
   "status": "PENDING",
   "dueDate": "2026-06-09",
-  "animal": { "id": 3 },
-  "volunteer": { "id": 2 }
+  "animal": { "id": 8 },
+  "volunteer": { "id": 3 }
 }
 
 ###
 
-### Tarea 3: Medicación de Pumba (Animal ID 4) - Asignada a Carlos (User ID 1)
+### Tarea 3: Medicación de Pumba (Animal ID 9) - Asignada a Carlos (User ID 2)
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -44,13 +44,13 @@ Content-Type: application/json
   "description": "Suministrar la pastilla diaria camuflada dentro de una pieza de fruta.",
   "status": "PENDING",
   "dueDate": "2026-06-08",
-  "animal": { "id": 4 },
-  "volunteer": { "id": 1 }
+  "animal": { "id": 9 },
+  "volunteer": { "id": 2 }
 }
 
 ###
 
-### Tarea 4: Infraestructura - Asignada a Miguel (User ID 3) -> ANIMAL ES NULL
+### Tarea 4: Infraestructura - Asignada a Miguel (User ID 4) -> ANIMAL ES NULL
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -60,12 +60,12 @@ Content-Type: application/json
   "description": "Revisar los enchufes del establo que dan fallos con la humedad.",
   "status": "COMPLETED",
   "dueDate": "2026-06-05",
-  "volunteer": { "id": 3 }
+  "volunteer": { "id": 4 }
 }
 
 ###
 
-### Tarea 5: Control de peso de Babe (Animal ID 2) -> VOLUNTARIO ES NULL (Nadie asignado)
+### Tarea 5: Control de peso de Babe (Animal ID 7) -> VOLUNTARIO ES NULL (Nadie asignado)
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -75,12 +75,12 @@ Content-Type: application/json
   "description": "Llevar a Babe a la báscula industrial y anotar el peso para controlar su dieta.",
   "status": "PENDING",
   "dueDate": "2026-06-12",
-  "animal": { "id": 2 }
+  "animal": { "id": 7 }
 }
 
 ###
 
-### Tarea 6: Sesión fotográfica para Turuleca (Animal ID 5) - Asignada a Sofía (User ID 4)
+### Tarea 6: Sesión fotográfica para Turuleca (Animal ID 11) - Asignada a Sofía (User ID 5)
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -90,13 +90,13 @@ Content-Type: application/json
   "description": "Hacer retratos bonitos de la gallina para subirlos a Instagram y buscar padrinos.",
   "status": "IN_PROGRESS",
   "dueDate": "2026-06-11",
-  "animal": { "id": 5 },
-  "volunteer": { "id": 4 }
+  "animal": { "id": 11 },
+  "volunteer": { "id": 5 }
 }
 
 ###
 
-### Tarea 7: Transporte de comida - Asignada a Javier (User ID 5) -> ANIMAL ES NULL
+### Tarea 7: Transporte de comida - Asignada a Javier (User ID 6) -> ANIMAL ES NULL
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -106,12 +106,12 @@ Content-Type: application/json
   "description": "Ir con el camión al almacén central a recoger la donación de alfalfa.",
   "status": "COMPLETED",
   "dueDate": "2026-06-01",
-  "volunteer": { "id": 5 }
+  "volunteer": { "id": 6 }
 }
 
 ###
 
-### Tarea 8: Preparación dieta de Margarita (Animal ID 1) - Asignada a Lucía (User ID 6)
+### Tarea 8: Preparación dieta de Margarita (Animal ID 6) - Asignada a Lucía (User ID 7)
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -121,13 +121,13 @@ Content-Type: application/json
   "description": "Preparar el cubo de alimentación con suplemento de calcio para la mañana.",
   "status": "PENDING",
   "dueDate": "2026-06-10",
-  "animal": { "id": 1 },
-  "volunteer": { "id": 6 }
+  "animal": { "id": 6 },
+  "volunteer": { "id": 7 }
 }
 
 ###
 
-### Tarea 9: Limpieza profunda - Asignada a Diego (User ID 7) -> ANIMAL ES NULL
+### Tarea 9: Limpieza profunda - Asignada a Diego (User ID 8) -> ANIMAL ES NULL
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -137,12 +137,12 @@ Content-Type: application/json
   "description": "Limpieza extrema de la mesa quirúrgica y suelos tras las intervenciones.",
   "status": "COMPLETED",
   "dueDate": "2026-06-04",
-  "volunteer": { "id": 7 }
+  "volunteer": { "id": 8 }
 }
 
 ###
 
-### Tarea 10: Asistencia veterinaria de Crazy (Animal ID 6) - Asignada a Marta (User ID 8)
+### Tarea 10: Asistencia veterinaria de Crazy (Animal ID 12) - Asignada a Marta (User ID 9)
 POST http://localhost:8080/tasks
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
 Content-Type: application/json
@@ -152,8 +152,8 @@ Content-Type: application/json
   "description": "Sujetar firmemente a la cabra mientras el veterinario oficial evalúa la rotura de la pata.",
   "status": "IN_PROGRESS",
   "dueDate": "2026-06-09",
-  "animal": { "id": 6 },
-  "volunteer": { "id": 8 }
+  "animal": { "id": 12 },
+  "volunteer": { "id": 9 }
 }
 
 ###

@@ -4,9 +4,13 @@ API RESTful para la gestión de un santuario de animales de granja. Permite admi
 
 ---
 
-## Diagrama de clases
+## Diagramas
 
-![Diagrama de clases](diagrams/Diagrama%20de%20clases.drawio.png)
+### Diagrama de clases
+<img src="diagrams/Diagrama%20de%20clases.drawio.png" width="500"/>
+
+### Diagrama de casos de uso
+<img src="diagrams/Diagrama%20UML.drawio.png" width="500"/>
 
 ### Herencia y relaciones
 - **User → Volunteer / Coordinator**: Herencia JOINED (tabla padre `users`, tablas hijas `volunteer` / `coordinator`)
@@ -29,7 +33,7 @@ API RESTful para la gestión de un santuario de animales de granja. Permite admi
 
 ### Clonar el repositorio
 ```bash
-git clone <url-del-repositorio>
+git clone https://github.com/kikesda-dev/puravida_animalsanctuary.git
 cd sanctuary
 ```
 
@@ -128,7 +132,7 @@ curl http://localhost:8080/animals \
 |------------------|-------------------------------------------------|
 | Trello           | *Pendiente*                                     |
 | Presentación     | *Pendiente*                                     |
-| Repositorio GitHub | <url-del-repositorio>                         |
+| Repositorio GitHub | [https://github.com/kikesda-dev/puravida_animalsanctuary](https://github.com/kikesda-dev/puravida_animalsanctuary) |
 
 ---
 

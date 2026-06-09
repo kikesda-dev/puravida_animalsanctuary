@@ -35,15 +35,19 @@ API RESTful desarrollada para la gestión integral de un santuario de animales d
 - **Java 25**
 - **Maven 3.9+**
 - **MySQL 8+**
+- **Cuenta de OpenAI** con API key (para el asistente IA)
 
-### Configuración de Base de Datos
-La aplicación está configurada para crear la base de datos automáticamente al iniciar. Asegúrate de tener una instancia de MySQL corriendo y actualiza las credenciales en `src/main/resources/application.properties`:
+### Variables de Entorno
+La aplicación requiere las siguientes variables de entorno configuradas en tu sistema:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/santuario_db?createDatabaseIfNotExist=true
-spring.datasource.username=${DB_USER}
-spring.datasource.password=${DB_PASSWORD}
+DB_USER=root                    # Usuario de MySQL
+DB_PASSWORD=your_password       # Contraseña de MySQL
+OPENAI_API_KEY=sk-...           # API key de OpenAI
 ```
+
+### Configuración de Base de Datos
+La aplicación está configurada para crear la base de datos automáticamente al iniciar. Asegúrate de tener una instancia de MySQL corriendo.
 
 ### Ejecutar la aplicación
 ```bash
@@ -60,7 +64,7 @@ Al iniciar por primera vez, se crea automáticamente un **coordinador admin**:
 
 ## Tecnologías utilizadas
 
-- Java 25 · Spring Boot · Spring Data JPA · Spring Security · Spring Web MVC · MySQL · JWT (auth0) · Lombok · Maven
+- Java 25 · Spring Boot · Spring Data JPA · Spring Security · Spring Web MVC · Spring AI · MySQL · JWT (auth0) · Lombok · Maven
 
 ---
 

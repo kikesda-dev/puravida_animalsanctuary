@@ -1,6 +1,11 @@
 # Pura Vida Animal Sanctuary 🐾
 
-API RESTful para la gestión de un santuario de animales de granja. Permite administrar animales rescatados, voluntarios, coordinadores, tareas de cuidado y donaciones, con autenticación JWT y control de acceso basado en roles.
+API RESTful desarrollada para la gestión integral de un santuario de animales de granja. El sistema permite administrar de forma centralizada animales rescatados, voluntarios, coordinadores, tareas de cuidado y donaciones.
+
+**Características principales:**
+*   **Seguridad:** Autenticación mediante **JWT (JSON Web Tokens)** con control de acceso basado en roles (`Volunteer` / `Coordinator`).
+*   **Arquitectura:** Diseño basado en **Spring Boot** con persistencia mediante **Spring Data JPA**.
+*   **Gestión:** CRUD completo para todas las entidades del sistema.
 
 ---
 
@@ -18,37 +23,26 @@ API RESTful para la gestión de un santuario de animales de granja. Permite admi
 - **Animal 1:N Task**: Un animal puede tener varias tareas asociadas
 - **Donation N:1 User**: Una donación puede estar vinculada a un usuario registrado (opcional)
 
-### Enumeraciones
+### Enums
 - `HealthStatus`: `HEALTHY`, `SICK`, `IN_TREATMENT`
 - `TaskStatus`: `PENDING`, `IN_PROGRESS`, `COMPLETED`
 
 ---
 
-## Configuración
+## Configuración y Ejecución
 
 ### Requisitos previos
 - **Java 25**
 - **Maven 3.9+**
 - **MySQL 8+**
 
-### Clonar el repositorio
-```bash
-git clone https://github.com/kikesda-dev/puravida_animalsanctuary.git
-cd sanctuary
-```
+### Configuración de Base de Datos
+La aplicación está configurada para crear la base de datos automáticamente al iniciar. Asegúrate de tener una instancia de MySQL corriendo y actualiza las credenciales en `src/main/resources/application.properties`:
 
-### Configurar base de datos
-Crea una base de datos MySQL llamada `santuario_db` (o se crea automáticamente):
-
-```sql
-CREATE DATABASE IF NOT EXISTS santuario_db;
-```
-
-Las credenciales por defecto en `application.properties`:
-```
-spring.datasource.url=jdbc:mysql://localhost:3306/santuario_db?createDatabaseIfNotExist=true&serverTimezone=UTC
-spring.datasource.username=root
-spring.datasource.password=root
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/santuario_db?createDatabaseIfNotExist=true
+spring.datasource.username=${DB_USER}
+spring.datasource.password=${DB_PASSWORD}
 ```
 
 ### Ejecutar la aplicación
@@ -60,13 +54,13 @@ La aplicación arranca en `http://localhost:8080`.
 
 Al iniciar por primera vez, se crea automáticamente un **coordinador admin**:
 - Email: `admin@puravidasanctuary.com`
-- Password: `1234`
+- Password: `****`
 
 ---
 
 ## Tecnologías utilizadas
 
-- **Java 25** · Spring Boot · Spring Data JPA · Spring Security · Spring Web MVC · MySQL · JWT (auth0) · Lombok · Maven
+- Java 25 · Spring Boot · Spring Data JPA · Spring Security · Spring Web MVC · MySQL · JWT (auth0) · Lombok · Maven
 
 ---
 
@@ -112,12 +106,25 @@ Al iniciar por primera vez, se crea automáticamente un **coordinador admin**:
 | POST   | `/donations`         | Registrar una donación           | Bearer |
 | DELETE | `/donations/{id}`    | Eliminar una donación            | Bearer |
 
+### Inteligencia Artificial (Spring AI) `/api/ai`
+Se ha integrado un asistente virtual conectado a la base de datos. Al proporcionar el ID de un animal, el sistema recupera su expediente clínico en tiempo real y solicita a la IA de OpenAI un plan de cuidados veterinarios, manteniendo el contexto de la conversación mediante memoria de chat.
+
+| Método | Ruta | Descripción | Auth |
+|--------|------|-------------|------|
+| GET | `/api/ai/advice/{conversationId}` | Obtener consejo de cuidado animal pasando su `animalId` por parámetro | Bearer |
+
+*Ejemplo de uso (solicitando consejo para el animal con ID 1):*
+```bash
+curl "http://localhost:8080/api/ai/advice/sesion-1?animalId=1" \
+  -H "Authorization: Bearer <JWT>"
+```
+
 ### Uso de ejemplo (login + token)
 ```bash
 # Login
 curl -X POST http://localhost:8080/api/login \
   -H "Content-Type: application/json" \
-  -d '{"email": "admin@puravidasanctuary.com", "password": "1234"}'
+  -d '{"email": "admin@puravidasanctuary.com", "password": "****"}'
 
 # Usar el token devuelto para rutas protegidas
 curl http://localhost:8080/animals \

@@ -33,3 +33,4 @@ build/
 .vscode/
 
 puravida_animalsanctuary/
+env.properties

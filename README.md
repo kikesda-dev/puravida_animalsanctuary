@@ -1,11 +1,44 @@
-# Pura Vida Animal Sanctuary 🐾
+# Pura Vida Animal Sanctuary
 
 API RESTful desarrollada para la gestión integral de un santuario de animales de granja. El sistema permite administrar de forma centralizada animales rescatados, voluntarios, coordinadores, tareas de cuidado y donaciones.
+
+<div align="center">
+
+![Java 25](https://img.shields.io/badge/Java_25-ED8B00?style=flat-square&logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?style=flat-square&logo=springboot&logoColor=white)
+![Spring Data JPA](https://img.shields.io/badge/Spring_Data_JPA-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![Spring Security](https://img.shields.io/badge/Spring_Security-6DB33F?style=flat-square&logo=springsecurity&logoColor=white)
+![Spring Web MVC](https://img.shields.io/badge/Spring_Web_MVC-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![Spring AI](https://img.shields.io/badge/Spring_AI-6DB33F?style=flat-square&logo=spring&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=mysql&logoColor=white)
+![JWT](https://img.shields.io/badge/JWT-000000?style=flat-square&logo=jsonwebtokens&logoColor=white)
+![Lombok](https://img.shields.io/badge/Lombok-BC4521?style=flat-square&logo=lombok&logoColor=white)
+![Maven](https://img.shields.io/badge/Maven-C71A36?style=flat-square&logo=apachemaven&logoColor=white)
+
+</div>
 
 **Características principales:**
 *   **Seguridad:** Autenticación mediante **JWT (JSON Web Tokens)** con control de acceso basado en roles (`Volunteer` / `Coordinator`).
 *   **Arquitectura:** Diseño basado en **Spring Boot** con persistencia mediante **Spring Data JPA**.
 *   **Gestión:** CRUD completo para todas las entidades del sistema.
+
+---
+
+## Requisitos previos
+
+- **Java 25**
+- **Maven 3.9+**
+- **MySQL 8+**
+- **Cuenta de OpenAI** con API key (para el asistente IA)
+
+---
+
+## Recursos
+
+- [Spring Boot 4.0.6 Reference Guide](https://docs.spring.io/spring-boot/docs/4.0.6/reference/htmlsingle/)
+- [Spring Security](https://docs.spring.io/spring-security/reference/)
+- [Auth0 java-jWT](https://github.com/auth0/java-jwt)
+- [MySQL Documentation](https://dev.mysql.com/doc/)
 
 ---
 
@@ -31,12 +64,6 @@ API RESTful desarrollada para la gestión integral de un santuario de animales d
 
 ## Configuración y Ejecución
 
-### Requisitos previos
-- **Java 25**
-- **Maven 3.9+**
-- **MySQL 8+**
-- **Cuenta de OpenAI** con API key (para el asistente IA)
-
 ### Variables de Entorno
 La aplicación requiere las siguientes variables de entorno configuradas en tu sistema:
 
@@ -47,7 +74,7 @@ OPENAI_API_KEY=sk-...           # API key de OpenAI
 ```
 
 ### Configuración de Base de Datos
-La aplicación está configurada para crear la base de datos automáticamente al iniciar. Asegúrate de tener una instancia de MySQL corriendo.
+La aplicación está configurada para crear la base de datos automáticamente al iniciar.
 
 ### Ejecutar la aplicación
 ```bash
@@ -62,11 +89,6 @@ Al iniciar por primera vez, se crea automáticamente un **coordinador admin**:
 
 ---
 
-## Tecnologías utilizadas
-
-- Java 25 · Spring Boot · Spring Data JPA · Spring Security · Spring Web MVC · Spring AI · MySQL · JWT (auth0) · Lombok · Maven
-
----
 
 ## Estructura de controladores y rutas
 
@@ -144,15 +166,6 @@ curl http://localhost:8080/animals \
 | Trello           | [https://trello.com/invite/b/6a26ef2a669a12783a7dee00/ATTIaceeb7dc8ba850a2ae19ba7fb0b8a6a74AAA2F8C/proyecto-final-sanctuary](https://trello.com/invite/b/6a26ef2a669a12783a7dee00/ATTIaceeb7dc8ba850a2ae19ba7fb0b8a6a74AAA2F8C/proyecto-final-sanctuary) |
 | Presentación     | *Pendiente*                                     |
 | Repositorio GitHub | [https://github.com/kikesda-dev/puravida_animalsanctuary](https://github.com/kikesda-dev/puravida_animalsanctuary) |
-
----
-
-## Recursos
-
-- [Spring Boot 4.0.6 Reference Guide](https://docs.spring.io/spring-boot/docs/4.0.6/reference/htmlsingle/)
-- [Spring Security](https://docs.spring.io/spring-security/reference/)
-- [Auth0 java-jWT](https://github.com/auth0/java-jwt)
-- [MySQL Documentation](https://dev.mysql.com/doc/)
 
 ---
 

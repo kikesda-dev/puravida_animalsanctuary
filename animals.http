@@ -96,19 +96,34 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwd
 //------------------------------PUT------------------------------
 ###
 
-PUT http://localhost:8080/animals/10
+PUT http://localhost:8080/animals/11
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
 Content-Type: application/json
 
 {
     "healthStatus": "HEALTHY",
     "id": 10,
-    "medicalHistory": "Desplume severo por estrés, ya le están creciendo las plumas.",
-    "name": "Turuleca",
+    "medicalHistory": "Desplume severo por estrés, las plumas ya tienen su brillo natural.",
+    "name": "Ginger",
     "rescueDate": "2026-04-10",
     "species": "Gallina",
     "tasks": []
   }
+
+###
+
+PUT http://localhost:8080/animals
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
+Content-Type: application/json
+
+{
+"name": "Babe",
+"species": "Cerdo Vietnamita",
+"healthStatus": "IN_TREATMENT",
+"medicalHistory": "Problemas de sobrepeso y articulaciones, en dieta estricta.",
+"rescueDate": "2026-05-20"
+}
+
 ###
 //------------------------------DELETE------------------------------
 ###

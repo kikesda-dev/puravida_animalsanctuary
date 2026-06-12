@@ -25,7 +25,7 @@ public class TaskController {
         return taskService.getTaskById(id);
     }
 
-    @PostMapping
+    @PostMapping("/{id}")
     @ResponseStatus(HttpStatus.CREATED)
     public Task createTask(@RequestBody Task task) {
         return taskService.saveTask(task);

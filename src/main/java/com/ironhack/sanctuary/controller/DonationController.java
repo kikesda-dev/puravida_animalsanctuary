@@ -1,5 +1,6 @@
 package com.ironhack.sanctuary.controller;
 
+import com.ironhack.sanctuary.dto.DonationDTO;
 import com.ironhack.sanctuary.model.Donation;
 import com.ironhack.sanctuary.service.DonationService;
 import lombok.RequiredArgsConstructor;
@@ -27,8 +28,8 @@ public class DonationController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Donation createDonation(@RequestBody Donation donation) {
-        return donationService.saveDonation(donation);
+    public Donation createDonation(@RequestBody DonationDTO donationDTO) {
+        return donationService.saveDonation(donationDTO);
     }
 
     @DeleteMapping("/{id}")

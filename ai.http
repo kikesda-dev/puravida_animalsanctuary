@@ -1,3 +1,3 @@
 ### Pedir consejos a la IA
-GET http://localhost:8080/api/ai/advice/sesion-1?animalId=12
+GET http://localhost:8080/api/ai/advice/sesion-1?animalId=11
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIyMzI0NTUsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.N-nviu0fSgOFUVWJC1m3BkC7Hiv-MDV05h1hSvIQ2aU

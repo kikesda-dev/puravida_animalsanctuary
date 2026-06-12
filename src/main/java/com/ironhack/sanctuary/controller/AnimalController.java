@@ -25,7 +25,7 @@ public class AnimalController {
         return animalService.getAnimalById(id);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
     public Animal updateAnimal(@PathVariable Long id, @RequestBody Animal animal) {
         return animalService.updateAnimal(id, animal);

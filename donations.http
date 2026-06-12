@@ -4,7 +4,7 @@
 
 ### CASO 1: Donante NO registrado que deja su nombre (Ej: Alguien entra en la web y dona)
 POST http://localhost:8080/donations
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
 Content-Type: application/json
 
 {
@@ -19,7 +19,7 @@ Content-Type: application/json
 
 ### CASO 2: Donante NO registrado totalmente anónimo (Ni usuario, ni nombre)
 POST http://localhost:8080/donations
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
 Content-Type: application/json
 
 {
@@ -33,7 +33,7 @@ Content-Type: application/json
 
 ### CASO 3: Donante REGISTRADO (Un voluntario, por ejemplo el ID 1, que dona desde su panel)
 POST http://localhost:8080/donations
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
 Content-Type: application/json
 
 {
@@ -41,7 +41,33 @@ Content-Type: application/json
   "message": "Mi pequeña aportación mensual como voluntario.",
   "donationDate": "2026-06-07",
   "isAnonymous": false,
-  "user": { "id": 1 }
+  "donorName": "Salvatore Corsaro"
+}
+
+###
+POST http://localhost:8080/donations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
+Content-Type: application/json
+
+{
+  "amount": 25.00,
+  "message": "Mi pequeña aportación mensual como voluntario.",
+  "donationDate": "2026-06-07",
+  "isAnonymous": false,
+  "donorName": "Salvatore Corsaro"
+
+###
+
+POST http://localhost:8080/donations
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
+Content-Type: application/json
+
+{
+  "amount": 25.00,
+  "message": "Prueba de donación vinculada.",
+  "donationDate": "2026-06-12",
+  "isAnonymous": false,
+  "userId": 1
 }
 
 ###
@@ -49,4 +75,13 @@ Content-Type: application/json
 ###
 
 GET http://localhost:8080/donations
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODE4MDY5MzcsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.n6J8V2lfXgtgfC6QlmRCQweDFPa6IqpQMvdKtIH76MM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
+
+
+###
+//---------------------------DELETE-----------------------------
+###
+
+DELETE http://localhost:8080/donations/3
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhZG1pbkBwdXJhdmlkYXNhbmN0dWFyeS5jb20iLCJleHAiOjE3ODIwNjgyMjIsImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6ODA4MC9hcGkvbG9naW4iLCJyb2xlcyI6WyJST0xFX0NPT1JESU5BVE9SIl19.aOx7Ao45ehRfDE6WfO63GlBz-iUuTBcUrrRfb_b7z8k
+Content-Type: application/json
